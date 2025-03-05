@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Kurniaji</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+<!-- Modal untuk Zoom Gambar -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" class="img-fluid rounded" alt="Zoomed Image">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg text-center p-4 position-relative">
+     <div id="datetime-container" class="position-absolute top-0 end-0 m-3 p-2 bg-dark text-white rounded d-flex align-items-center">
+    <span id="current-date" class="me-2">4 Maret 2025</span>
+    <span id="current-time">00:00:00</span>
+</div>
+        <!-- Foto Profil -->
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Foto Profil" class="rounded-circle mb-4 profile-img">
+        </div>
+        <h1 class="h3 mb-3">Kurniaji, A.Md.Stat</h1>
+
+        <!-- Konten yang Bisa di Scroll -->
+        <div class="scrollable-content">
+            <p class="text-muted mb-4">
+                Saya seorang lulusan D3 Statistika. Saya mampu bekerja secara mandiri maupun kolaborasi. 
+                Bekerja secara Perorangan ataupun Keroyokan saya siap hantam.
+            </p>
+
+            <h2 class="h5 mt-4">Keahlian</h2>
+            <hr class="garis-h2">
+            <div class="progress mt-2">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 90%;">Microsoft Office - 90%</div>
+            </div>
+            <div class="progress mt-2">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 80%;">Html Language - 75%</div>
+            </div>
+            <div class="progress mt-2">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;">Css Language - 75%</div>
+            </div>
+            <div class="progress mt-2">
+                <div class="progress-bar bg-black" role="progressbar" style="width: 75%;">Javascript Language - 75%</div>
+            </div>
+            <div class="progress mt-2">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;">Erp software - 85%</div>
+            </div>
+            <div class="progress mt-2">
+                <div class="progress-bar bg-blue" role="progressbar" style="width: 80%;">leadership - 80%</div>
+            </div>
+            <div class="progress mt-2">
+              <div class="progress-bar bg-purple" role="progressbar" style="width: 75%;">Statistic Software - 75%</div>
+            </div>
+            
+            <h2 class="h5 mt-4">Pengalaman Kerja</h2>
+            <hr class="garis-h2">
+            <ul class="list-group">
+                <li class="list-group-item">Administrasi Pendok- Balai Karantina Pertanian Kelas 1 Semarang (2021-2022)</li>
+                <li class="list-group-item">Mitra survey Organik Bulanan- Badan Pusat Statistik Kab. Pekalongan (2022-2023)</li>
+                <li class="list-group-item">Project Control Foreman- PT. Harmoni Panca Utama (2023-2023)</li>
+                <li class="list-group-item">Administrasi Logistic dan distribution - PT. Trimitra Swadaya Bali (2023-Sekarang)</li>
+            </ul>
+
+            <h2 class="h5 mt-4">Pengalaman Organisasi</h2>
+            <hr class="garis-h2">
+            <ul class="list-group">
+                <li class="list-group-item">Ukm Mapesista - Wakil Ketua umum (2020-2021)</li>
+                <li class="list-group-item">Ukm Mapesista - Ketua Umum (2021-2022)</li>
+                <li class="list-group-item">PK IMM alkhawarizmi Itesa - Ketua Bidang Hikmah (2021-2022)</li>
+                 <li class="list-group-item">BEM Itesa - Anggota Dep 2 (2020-2022)</li>
+            </ul>
+
+            <h2 class="h5 mt-4">Testimoni</h2>
+            <hr class="garis-h2">
+            <div id="carouselTestimoni" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="text-muted">"Dia sangat Handal dan hal cekatan dalam mengumpulkan data" - superior</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-muted">"Dia memiliki jari seperti robot ketika di hadapkan dengan excel" - colleague</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-muted">"Dia selalu solutif dan hyper active" - subordinate</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimoni" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimoni" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <h2 class="h5 mt-4">Portofolio</h2>
+            <hr class="garis-h2">
+            <div class="row">
+                <div class="col-4">
+                    <img src="Portofolio1.jpg" alt="Proyek" class="img-fluid rounded Proyek-img">
+                </div>
+                <div class="col-4">
+                    <img src="Portofolio2.jpg" alt="Proyek" class="img-fluid rounded Proyek-img">
+                </div>
+                <div class="col-4">
+                    <img src="Portofolio3.jpg" alt="Proyek" class="img-fluid rounded Proyek-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol Media Sosial dan Download CV -->
+       <div class="button-container">
+    <div class="button-group mt-4 mb-3">
+        <a href="https://www.facebook.com/profile.php?id=100006791569086" class="btn btn-outline-dark social-btn">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kurniaji" class="btn btn-outline-dark social-btn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/_djick/" class="btn btn-outline-dark social-btn">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:kurniaji.0312@gmail.com" class="btn btn-outline-dark social-btn">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</div>
+                <!-- Tombol Download CV dengan Notifikasi -->
+        <a href="#" id="downloadCV" class="btn btn-outline-dark mt-3">Download CV</a>
+
+        </div>
+       <!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script utama -->
+<script src="script.js"></script>
+  </body>
+
+<div class="text-center pt-3 copyright">  
+    <p class="mb-0">© <span id="year"></span> Copyright | Kurniaji</p>  
+</div>
+        </div>  
+    </div>  
+</div>
+</html>

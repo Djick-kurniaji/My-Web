@@ -1,0 +1,288 @@
+/* Import Font Elegan & Mewah */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600&family=Lora:wght@400;600&display=swap');
+
+/* Global Body */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,#13278b, #3a6186, #89253e, #3a6186, #ff6a8f, #6a7fff);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s ease-in-out infinite;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Lora', serif;
+    text-rendering: optimizeLegibility;
+}
+
+/* Animasi Background */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container agar margin atas & bawah seimbang */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+}
+#datetime-container {
+    font-size: 9px;
+    font-weight: bold;
+    opacity: 0.5;
+    display: flex;
+    gap: 3px;
+    font-family: 'primary';
+}
+/* Card agar berada di tengah dengan margin seimbang */
+.card {
+    background-color: #f8f9fa;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    position: relative;
+    border: 3px solid #d4af37; /* Warna emas untuk kesan mewah */
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin-top: -35px;
+    margin-bottom: -20px;
+    
+}
+
+/* Pastikan card memiliki posisi relatif */
+.card {
+    position: relative;
+    margin-bottom: 1px; /* Menyesuaikan jarak dengan copyright */
+}
+
+/* Foto Profil */
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.bg-purple {
+    background-color: #8b5cf6 !important; /* Warna ungu muda */
+}
+
+/* Judul */
+.card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+/* Deskripsi */
+.card p {
+    font-family: 'Lora', serif;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Scrollable Content */
+.scrollable-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 50vh;
+    padding-right: 10px;
+}
+
+/* Progress Bar */
+.progress {
+    height: 20px;
+}
+
+.progress-bar {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #343a40;
+    margin-bottom: 1rem;
+}
+
+.garis-h2 {
+    border: none;
+    height: 3px;
+    background-color: #007bff;
+    margin-top: -5px;
+}
+
+/* Portofolio Gambar */
+.proyek-img {
+    width: 15rem;
+    height: 45rem;
+    border: 1px solid #000000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+
+}
+/* Tombol Media Sosial */
+.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin-bottom: 0.1rem;
+}
+
+.social-btn i {
+    color: #333;
+}
+
+.social-btn:hover {
+    background-color: #ddd;
+}
+
+/* Warna Spesifik untuk Tiap Ikon */
+.social-btn:nth-child(1) i { color: #1877f2; } /* Facebook */
+.social-btn:nth-child(2) i { color: #0077b5; } /* LinkedIn */
+.social-btn:nth-child(3) i { color: #e4405f; } /* Instagram */
+.social-btn:nth-child(4) i { color: #d44638; } /* Email */
+
+/* Tombol Download CV */
+.button-container a.btn-outline-dark {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tombol Media Sosial Sejajar */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -2rem;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.instruction {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Copyright 1px di bawah card */
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 1px;
+    margin-top: 0.1px; /* Pastikan hanya berjarak 1px dari card */
+    margin-bottom: 0.1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* 🔹 RESPONSIF UNTUK MOBILE */
+@media (max-width: 480px) {
+    .container {
+        padding: 4vh 2vw;
+    }
+    .card {
+        width: 95%;
+        max-width: 340px;
+        padding: 2rem;
+    }
+    .profile-img {
+        width: 8rem;
+        height: 8rem;
+    }
+    .card h1 {
+        font-size: 1.6rem;
+    }
+    .card p {
+        font-size: 1rem;
+    }
+}
+
+/* 🔹 RESPONSIF UNTUK DESKTOP */
+@media (min-width: 1200px) {
+    .container {
+        padding: 6vh 6vw;
+    }
+    .card {
+        max-width: 550px;
+        padding: 3rem;
+    }
+    .profile-img {
+        width: 11rem;
+        height: 11rem;
+    }
+    .card h1 {
+        font-size: 2.3rem;
+    }
+    .card p {
+        font-size: 1.2rem;
+    }
+}
